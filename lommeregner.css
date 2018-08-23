@@ -8,5 +8,14 @@
 	border-radius: 10px;
 	width: 50%;
 	display: block;
-	background-image: linear-gradient(#DFDFDF, #878686);
+	background-image: linear-gradient(#F2F2F2, #B7B7B7);
+}
+
+.input {
+	border: 1px solid;
+	border-radius: 3px;
+}
+
+.button {
+	border: 1px solid;
 }

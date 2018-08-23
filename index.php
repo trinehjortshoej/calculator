@@ -20,14 +20,15 @@
 	<!--Form med input felter og knapper. Form sender til sig selv-->
 	<form action="<?=$_SERVER['PHP_SELF']?>" method="get">
 		
-		<input type="number" name="val1" placeholder="0" value="<?=$v1?>" required><br>
+		<input class="input" type="number" name="val1" placeholder="0" value="<?=$v1?>" required><br>
 		
-		<input type="number" name="val2" placeholder="0" value="<?=$v2?>" required> <br><br>
+		<input class="input" type="number" name="val2" placeholder="0" value="<?=$v2?>" required> <br><br>
 		
-		<button type="submit" name="operator" value="add">+</button>
-		<button type="submit" name="operator" value="sub">-</button>
-		<button type="submit" name="operator" value="mul">*</button><button type="submit" name="operator" value="div">/</button>
-		<button type="submit" name="operator" value="mod">%</button><br><br>
+		<button class="button" type="submit" name="operator" value="add">+</button>
+		<button class="button" type="submit" name="operator" value="sub">-</button>
+		<button class="button" type="submit" name="operator" value="mul">*</button>
+		<button class="button" type="submit" name="operator" value="div">/</button>
+		<button class="button" type="submit" name="operator" value="mod">%</button><br><br>
 	</form>
 	
 	<?php
