@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#lommeregner {
+	padding: 5px;
+	margin: 10px;
+	border: 2px solid;
+	border-radius: 10px;
+	width: 50%;
+	display: block;
+	background-image: linear-gradient(#DFDFDF, #878686);
+}
