@@ -2,22 +2,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Lommeregner</title>
-	<link rel="stylesheet" href="lommeregner.css">
+<title>Calculator</title>
+	<link rel="stylesheet" href="calculator.css">
 </head>
 
 <body>
 	
-	<div id="lommeregner">
-	<h1>Lommeregner</h1>
+	<div id="calculator">
+	<h1>Calculator</h1>
 	
-	<!-- Specifikationer:
-		Felt 1 = indtast tal
-		Felt 2 = knapper med operator
-		Felt 3 = indtast tal
-		Felt 4 = resultat (ikke skrivbartfelt) -->
+	<!-- Specifications:
+		Input 1 = write number
+		Input 2 = operator buttons
+		Input 3 = write number
+		Input 4 = result -->
 	
-	<!--Form med input felter og knapper. Form sender til sig selv-->
+	<!--Form with input and buttons. Form sends to itself -->
 	<form action="<?=$_SERVER['PHP_SELF']?>" method="get">
 		
 		<input class="input" type="number" name="val1" placeholder="0" value="<?=$v1?>" required><br>
@@ -33,13 +33,13 @@
 	
 	<?php
 	
-	//Angiver at det indtastede bliver en værdi
+	//Value
 	//$v1 = $_GET['val1'];
 	//$v2 = $_GET['val2'];
 	
-	//Angiver at det indtastede bliver en værdi og validerer for om det er et tal, eller ugyldigt
-	$v1 = filter_input(INPUT_GET, 'val1', FILTER_VALIDATE_INT) or die('Tast to tal og vælg en af de givne muligheder');
-	$v2 = filter_input(INPUT_GET, 'val2', FILTER_VALIDATE_INT) or die('Tast to tal og vælg en af de givne muligheder');
+	//Value and validate, or die(unknown command)
+	$v1 = filter_input(INPUT_GET, 'val1', FILTER_VALIDATE_INT) or die('Write two numbers and choose an operator option');
+	$v2 = filter_input(INPUT_GET, 'val2', FILTER_VALIDATE_INT) or die('Write two numbers and choose an operator option');
 	$op = $_GET['operator'];
 		  
 	switch($op){
@@ -64,11 +64,11 @@
 				  $opchar = '%';
 				  break;
 			  default:
-				  $res = 'Prøv lommeregneren med en af de givne muligheder'; 
+				  $res = 'Try the calculator with a valid operator'; 
 				break;
 		  }
-	//resultat af indtastning udskrives
-	echo $v1.' '.$opchar.' '.$v2.' = '.$res;
+	//Result of numbers in input
+	echo 'The result of '.$v1.' '.$opchar.' '.$v2.' = '.$res;
 		  ?>
 	</div>	
 </body>
