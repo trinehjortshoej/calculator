@@ -65,7 +65,7 @@
 				  $opchar = '/';
 				  break;
 			case 'mod':
-				  $res = $v1 % $v2 == 0;
+				  $res = $v1 % $v2;
 				  $opchar = '%';
 				  break;
 			  default:
