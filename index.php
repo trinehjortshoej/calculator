@@ -37,13 +37,15 @@
 	//$v1 = $_GET['val1'];
 	//$v2 = $_GET['val2'];
 	
-	
+	$op = $_GET['operator'];
+		  
+	if(isset($op)) {
 	
 	//Value and validate, or die(unknown command)
 	$v1 = filter_input(INPUT_GET, 'val1', FILTER_VALIDATE_INT) or die('Write two numbers and choose an operator option');
 	$v2 = filter_input(INPUT_GET, 'val2', FILTER_VALIDATE_INT) or die('Write two numbers and choose an operator option');
-	$op = $_GET['operator'];
-		  if(isset($op)) {
+	
+		  
 		  
 	switch($op){
 			 case 'add':
@@ -70,10 +72,11 @@
 				  $res = 'Try the calculator with a valid operator'; 
 				break;
 		  }
-			 }
+			 
 			  
 	//Result of numbers in input
 	echo 'The result of '.$v1.' '.$opchar.' '.$v2.' = '.$res;
+		}
 		  ?>
 	</div>	
 </body>
