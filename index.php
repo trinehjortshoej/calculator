@@ -20,9 +20,9 @@
 	<!--Form with input and buttons. Form sends to itself -->
 	<form action="<?=$_SERVER['PHP_SELF']?>" method="get">
 		
-		<input class="input" type="number" name="val1" placeholder="0" value="<?=$v1?>" required><br>
+		<input class="input" type="number" name="val1" placeholder="0" value="<?=$_GET['val1']??''?>" required><br>
 		
-		<input class="input" type="number" name="val2" placeholder="0" value="<?=$v2?>" required> <br><br>
+		<input class="input" type="number" name="val2" placeholder="0" value="<?=$_GET['val2']??''?>" required> <br><br>
 		
 		<button class="button" type="submit" name="operator" value="add">+</button>
 		<button class="button" type="submit" name="operator" value="sub">-</button>
